@@ -113,7 +113,6 @@ time.sleep(2)
 
 print('Otario')
 
-'''
 
 #loops de repetição utilizando a 'for'
 
@@ -136,3 +135,84 @@ for ele in range (0, 11): #vai trocar o antigo valor pra um novo causando a sua 
     soma = soma + ele
 
 print(soma)
+
+#UTILIZANDO FOR PARA SOMA E CACLUOS
+
+#primeiro crie uma variavel
+soma = 0
+
+#crie o for, o nome da primeira variavel pouco importa
+for ele in range (0, 11): #vai trocar o antigo valor pra um novo causando a sua soma
+    soma = soma + ele
+
+print(soma)
+
+
+#descobrir palindromos
+
+palavra = input('Digite uma palavra para saber se ela é ou não um palindromo: ').lower().strip()
+
+if ' ' in palavra:
+    palavra = palavra.replace(' ', '') #tira os espaços e pode ser utilizado textos
+
+for palindromo in palavra:
+    if palavra == palavra[:: -1]:
+        print('é palindromo')
+    else:
+        print('não é palindromo')
+
+'''
+
+#funcao 'while', o famoso enquanto
+
+
+contador = 0
+resposta = 'S'
+
+while resposta != 'N' :  # condição de parada
+    print(f'O contador é {contador}')
+    contador += 1
+    resposta = str(input('Quer continuar? [S/N]')).upper().strip()[0]
+
+print('Loop concluído!')
+
+
+#caso1
+
+contador = 0
+
+while contador < 100:
+    contador += 1
+    print('*') #retorna o asterisco cem vezes
+
+#caso2
+#tomada de decisão
+#Diferente de (!=)
+#o codigo so para se voce digitar 'N'
+
+decisao = ''
+while decisao != 'N':
+    numero = int(input('Numero: '))
+    if numero % 2 == 0:
+        print('é par')
+    decisao = input('Deseja continuar? [S/n]').upper().strip() [0]
+
+
+#caso3
+#realização de calculos sem usar o def
+opcao = ''
+while opcao != 'Sair':
+    numero = int(input('Numero: '))
+    outro_numero = int(input('Numero: '))
+
+    opcao = input('O que deseja?'
+                  '\n1 - Somar'
+                  '\n2 - Multiplicar'
+                  '\n Sair ----> ')
+
+    if opcao == '1':
+        print(f'A soma  é {numero + outro_numero}')
+    elif opcao == '2':
+        print(f'A multiplicação é {numero * outro_numero}')
+    else:
+        print('Erro')
