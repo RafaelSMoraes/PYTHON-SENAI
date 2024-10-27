@@ -9,7 +9,7 @@ Crie uma calculadora que após ler 3 valores, mostre e opere de acordo com as op
 '''
 
 import random
-
+'''
 opcao = ''
 while opcao != 'Sair':
     numero = []
@@ -40,3 +40,44 @@ while opcao != 'Sair':
         else:
             print('Você saiu')
             exit()
+'''
+
+#correção professor:
+
+escolha = ''
+
+
+while escolha != '5':
+    print('-------------------------------')
+    n1 = int(input('Digite um número: '))
+    n2 = int(input('Digite um número: '))
+    n3 = int(input('Digite um número: '))
+
+
+    escolha = input('O que deseja?\n'
+                   '1 - somar\n'
+                   '2 - multiplicar\n'
+                   '3 - maior\n'
+                   '4 - novos números\n'
+                   '5 - sair do programa\n'
+                   '--------->')
+
+    if escolha == '1':
+        print(f'A soma dos números são {n1 + n2 + n3}')
+    elif escolha == '2':
+        print(f'A multiplicação dos números são {n1*n2*n3}')
+    elif escolha == '3':
+        if n1 > n2 and n3:
+            print(f'O maior número é {n1}')
+        elif n2 > n1 and n3:
+            print(f'O maior número é {n2}')
+        elif n3 > n1 and n2:
+            print(f'O maior número é {n3}')
+    elif escolha == '4':
+        n1 = int(input('Digite um número: '))
+        n2 = int(input('Digite um número: '))
+        n3 = int(input('Digite um número: '))
+    elif escolha == '5':
+        print('Até breve')
+    else:
+        print('Erro!')
