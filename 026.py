@@ -5,11 +5,11 @@ try:
     imc = peso / (altura**2)
 
     if imc > 25:
-        print(f'IMC de {imc} voc� est� sobre o seu peso ideal')
+        print(f'IMC de {imc} voce esta sobre o seu peso ideal')
     elif imc > 18.5:
-        print(f'IMC de {imc} voc� est� com peso ideal')
+        print(f'IMC de {imc} voce esta com peso ideal')
     else:
-        print(f'IMC de {imc} est� abaixo do ideal')
+        print(f'IMC de {imc} esta abaixo do ideal')
 
 except ValueError:
     print('Apenas numeros')
