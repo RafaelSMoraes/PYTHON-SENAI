@@ -9,22 +9,24 @@ d5 = 'SEXTA-FEIRA'
 d6 = 'SÁBADO'
 d7 = 'DOMINGO'
 '''
+try:
+    user = int(input('Coloque um numero de 1 a 7 para saber o dia da semana: '))
 
-user = int(input('Coloque um numero de 1 a 7 para saber o dia da semana: '))
-
-if user == 1:
-    print('Segunda-Feira')
-elif user == 2:
-    print('Terça-Feira')
-elif user == 3:
-    print('Quarta-Feira')
-elif user == 4:
-    print('Quinta-Feira')
-elif user == 5:
-    print('Sexta-Feira')
-elif user == 6:
-    print('Sábado')
-elif user == 7:
-    print('Domingo')
-else:
-    print('Esse número não consta na nossa base de dados, tente novamente')
+    if user == 1:
+        print('Segunda-Feira')
+    elif user == 2:
+        print('Terça-Feira')
+    elif user == 3:
+        print('Quarta-Feira')
+    elif user == 4:
+        print('Quinta-Feira')
+    elif user == 5:
+        print('Sexta-Feira')
+    elif user == 6:
+        print('Sábado')
+    elif user == 7:
+        print('Domingo')
+    else:
+        print('Esse número não consta na nossa base de dados, tente novamente')
+except ValueError:
+    print('Apenas numeros')
