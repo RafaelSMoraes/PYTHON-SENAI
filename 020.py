@@ -55,21 +55,27 @@ criterio = input(f'Você possui {idade} anos, pesa {peso}kg e '
 
 #metodo do professor, o 'escudo', começa da positiva (if) para a negativa (else)
 #lembra a formação de um site
-
-idade = int(input('idade: '))
-if idade >= 16 and idade < 69:
-    peso = float(input('Peso: '))
-    if peso > 50:
-        sono = int(input('Horas de sono: '))
-        if sono > 8:
-            doacao_sangue = input('Você doou sangue? [S/N] ').upper().strip()[0]
-            if doacao_sangue == 'S':
-                print('Você pode doar')
+try:
+    idade = int(input('idade: '))
+    if idade >= 16 and idade < 69:
+        peso = float(input('Peso: '))
+        if peso > 50:
+            sono = int(input('Horas de sono: '))
+            if sono > 8:
+                doacao_sangue = input('Você doou sangue? [S/N] ').upper().strip()[0]
+                if doacao_sangue == 'S':
+                    print('Você pode doar')
+                else:
+                    print('Você já doou sangue, tente novamente ano que vem')
             else:
-                print('Você já doou sangue, tente novamente ano que vem')
+                print('Precisa dormir mais')
         else:
-            print('Precisa dormir mais')
+            print('Peso incorreto')
     else:
-        print('Peso incorreto')
-else:
-    print('idade incorreta')
+        print('idade incorreta')
+except ValueError:
+    print('Apenas numeros')
+except SyntaxError:
+    print('Apenas letras')
+except:
+    print('Erro: Chamar o TI')
