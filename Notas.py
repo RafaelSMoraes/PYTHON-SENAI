@@ -48,6 +48,8 @@ print(nome[0]) #começa do primeiro caractere
 print(nome[0:6]) #vai ate o setimo caractere
 print(nome[5:]) #Depois do quinto caractere
 
+print (nome [:: -1] #inverte a palavra, se utiliza para verificação de palindromo
+
 #analise
 print(len(nome))
 print(nome.count('a')) #quantos "A" tem
@@ -114,27 +116,17 @@ time.sleep(2)
 print('Otario')
 
 
+
 #loops de repetição utilizando a 'for'
 
 for ele in range (0, 10): #o 'ele' é uma variavel descartavel
-    print('*')
+    print('*') #saida esperada: * * * * * * * * * * *  * (todos na vertical)
 
 for ele in range (10 , 0, -1 ): #Conta do maior para o menor (10 ,9, 8...)
     print(ele)
 
 for ele in range (0, 10): #troca a variavel descartavel por numeros de forma crescente
     print(ele)
-
-#UTILIZANDO FOR PARA SOMA E CACLUOS
-
-#primeiro crie uma variavel
-soma = 0
-
-#crie o for, o nome da primeira variavel pouco importa
-for ele in range (0, 11): #vai trocar o antigo valor pra um novo causando a sua soma
-    soma = soma + ele
-
-print(soma)
 
 #UTILIZANDO FOR PARA SOMA E CACLUOS
 
@@ -161,7 +153,7 @@ for palindromo in palavra:
     else:
         print('não é palindromo')
 
-'''
+
 
 #funcao 'while', o famoso enquanto
 
@@ -216,3 +208,69 @@ while opcao != 'Sair':
         print(f'A multiplicação é {numero * outro_numero}')
     else:
         print('Erro')
+
+
+
+#Laços infinitos
+
+a = 0
+
+while True:
+    resposta = input('Deseja mais números? [S/N] -> ').upper()[0]
+    if resposta == 'N':
+        break
+    else:
+        for i in range(100):
+            a += 1
+            print(a)
+
+
+while True:
+    print('1. Opção X \n'
+          '2. Opção Y \n'
+          '3. Sair')
+    menu = int(input('Digite a escolha: '))
+
+    if menu == 3:
+        break
+
+
+#tratamento de erros try e except
+
+try:
+    numero = int(input('numero: '))
+except ValueError:
+    print('Apenas numeros')
+except:
+    print('ERRO: Chamar a TI')
+
+'''
+
+#funções
+
+def bem_vindo():
+    print('-*-' * 50)
+    print('Bem vindo ao Senai!!!!')
+    print('*' * 50)
+
+def mensagem(msg):
+    print('*' * 50)
+    print(f'{msg}')
+    print('*' * 50)
+
+def volume (r):
+    return (4/3) * 3.1415 * r ** 3
+
+#uso
+
+#boas vindas
+bem_vindo()
+
+#mensagem utilizando uma variavel e retornando ela
+
+nome = 'rafael silva moraes'
+mensagem(nome)
+
+#calculo de volume de esfera
+volume_esfera = volume(5)
+print(volume_esfera)
