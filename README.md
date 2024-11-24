@@ -28,4 +28,4 @@ Se você tiver alguma dúvida, entre em contato com o meu E-mail: moraes.rafaels
 
 ---
 
-*Obrigado por visitar o meu repositório! Espero que você ache os projetos interessantes!*
+*Obrigado por visitar o meu repositório! Espero que você ache os projetos interessantes :)*
