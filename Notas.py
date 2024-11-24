@@ -244,7 +244,7 @@ except ValueError:
 except:
     print('ERRO: Chamar a TI')
 
-'''
+
 
 #funções
 
@@ -274,3 +274,56 @@ mensagem(nome)
 #calculo de volume de esfera
 volume_esfera = volume(5)
 print(volume_esfera)
+
+#tuplas
+
+carro = ('Ferrari', 'Vermelha', '2023')
+print(carro)
+print(carro[0])
+print(sorted(carro))
+
+for ele in carro:
+    print(ele)
+
+print(carro.index('2023'))
+
+idades = (10, 23, 43, 67)
+
+print(max(idades))
+print(min(idades))
+print(sum(idades) / len(idades)) #soma (sum) dividida pela quantidade de elementos (len)
+
+
+nome = ('Rafael', 'Moraes')
+
+for i in nome:
+    for x in i:
+        print(x)
+
+#saida esperada:
+    # R
+    # a
+    # f
+    # a
+    # e
+    # l
+'''
+
+#listas
+
+#muito utilizada em banco de dados
+#mutavel
+
+carro = ['Ferrari', 'Vermelha', '2023']
+
+carro.append('795 cv') #adiciona uma informação nova na lista no final dela
+carro.insert(1, 'Gasolina') #troca a informação por outra coisa desejada
+print(carro)
+carro.remove('Gasolina') #remove especificamente o que é desejado, lembrando que,
+# deve ser escrito da mesma forma da lista
+
+carro.pop(0) #remove tambem, mas nao precisa escrever e sim informar a área
+len(carro)# retorna o tamanho da lista
+
+for x in carro:
+    print(x)
